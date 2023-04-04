@@ -1,0 +1,9 @@
+mutation deleteMember(
+  $id: uuid = ""
+) {
+  delete_members(
+    where: { id: { _eq: $id } }
+  ) {
+    affected_rows
+  }
+}
